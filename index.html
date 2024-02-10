@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+  
+  <!-- 这段代码的目的是设置文档的字符编码、视口、标题，并引入外部的字体图标库和自定义样式表文件，以确保文档正确渲染并应用所需的样式和图标 -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+
+
+
+   <!--  这段代码构建了一个简单的 Todo List 页面，包括标题、任务输入表单和任务列表的容器 -->
+
+  <body>
+    <header>
+      <h1>Todo List</h1>
+    </header>
+
+    <form>
+      <input type="text" />
+      <input type="number" min="1" max="12" placeholder="M" required />
+      <input type="number" min="1" max="31" placeholder="D" required />
+      <button type="submit">Add into List</button>
+    </form>
+
+    <br />
+    <br />
+
+    <div class="sort">
+      <button>Sort By Time</button>
+    </div>
+
+    <section></section>
+  </body>
+
+  <!--将一个名为 app.js 的 JavaScript 文件包含在 HTML 页面中。这个 <script> 标签用于引入外部 JavaScript 文件，
+    以便在页面加载时执行其中的脚本代码。通过这个脚本文件，可以实现与页面交互、处理逻辑、动态更新内容等功能。
+    在这种情况下，app.js 可能包含与 Todo List 应用相关的脚本代码，用于处理任务的添加、删除、排序等操作，
+    以及更新任务列表的显示。 -->
+    
+  <script src="./app.js"></script>
+</html>

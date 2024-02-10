@@ -1,0 +1,165 @@
+
+//*適用於所有元素
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// <i>元素斜體文本，不會觸發任何事件
+i {
+  pointer-events: none;
+}
+
+// body設定背景顏色
+body {
+  background: linear-gradient(90deg, rgb(84, 130, 255), rgb(100, 255, 134));
+}
+
+//样式化 <header> 元素及其内部的 <h1> 元素
+
+header {
+  height: 20vh;
+  display: flex; //容器的子元素（Flex 项目）会按照一定规则进行布局
+  justify-content: center;
+  align-items: center;
+  h1 {
+    color: white;
+    font-size: 3rem;
+  }
+}
+
+//样式化 <form> 元素及其内部的 <input> 和 <button> 元素
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  input,
+  button {
+    border: none;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.75rem;
+    margin: 0.1rem;
+  }
+
+  input[type="number"] {
+    width: 50px;
+    text-align: center;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  button {
+    cursor: pointer;
+    background-color: rgb(0, 146, 114);
+    color: white;
+  }
+}
+
+//样式化 <section> 元素及其内部的 .todo 类型的 <div> 元素
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  div.todo {
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    margin: 0.2rem 0rem;
+    transition: all 0.1s ease;
+
+    p {
+      background-color: white;
+      color: black;
+      padding: 0.25rem 0.5rem;
+      font-size: 1.75rem;
+    }
+
+    p.todo-text {
+      width: 50%;
+    }
+    p.todo-time {
+      width: 20%;
+      text-align: center;
+    }
+
+    button {
+      padding: 0.25rem 0.5rem;
+      font-size: 1.75rem;
+      border: none;
+      cursor: pointer;
+      color: white;
+    }
+
+    button.complete {
+      background-color: rgb(50, 255, 50);
+    }
+    button.trash {
+      background-color: red;
+    }
+  }
+}
+
+
+//样式化具有 class 为 "sort" 的 <div> 元素及其内部的 <button> 元素
+div.sort {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0rem;
+
+  button {
+    cursor: pointer;
+    background-color: rgb(0, 146, 114);
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.75rem;
+  }
+}
+
+
+//div vs section 
+//如果内容可以被独立地划分为主题或部分，则使用 <section> 更合适。
+//如果只需要一个通用的容器来组合元素或应用样式，则可以使用 <div>。
+
+
+// class 为 "done" 的元素的文本设置为带有删除线的样式
+//并降低其不透明度，使其呈现半透明的外观。通常，这种样式用于表示已完成或已过期的内容。
+.done {
+  opacity: 0.5;
+  text-decoration: line-through;
+  text-decoration-thickness: 0.2rem;
+}
+
+//通过使用这个动画关键帧，在应用到元素时可以实现一个逐渐放大的效果。
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+//通过使用这个动画关键帧，在应用到元素时可以实现一个逐渐缩小的效果。
+@keyframes scaleDown {
+  to {
+    transform: scale(0);
+  }
+}
